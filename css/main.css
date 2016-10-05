@@ -5,7 +5,7 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,31 +14,22 @@ html {
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
 }
 
-h1 {
-  text-align: center;
-}
-
 header {
   background-color: #e2e2e2;
-  padding: .5rem 0;
+  text-align: center;
 }
 
 nav li {
   text-decoration: none;
-  text-align: center;
   list-style-type: none;
-}
-
-nav ul {
-  padding: 0;
-  margin: 0;
+  display: inline-block;
 }
 
 nav a {
@@ -46,8 +37,42 @@ nav a {
   color: #0074d9;
 }
 
+li {
+  display: inline-block;
+}
+
+.current,
 nav a:hover {
   background-color: #0074d9;
   color: #fff;
+}
+
+@media only screen and (min-width: 38em) {
+
+  nav {
+    float: right;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  header h1 {
+    float: left;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  nav {
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  nav {
+    float: right;
+  }
 
 }
